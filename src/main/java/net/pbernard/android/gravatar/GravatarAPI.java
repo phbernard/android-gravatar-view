@@ -25,7 +25,7 @@ public class GravatarAPI {
 	public static final String DEFAULT_IMAGE_MONSTERID = "monsterid";
 	public static final String DEFAULT_IMAGE_WAVATAR = "wavatar";
 	public static final String DEFAULT_IMAGE_RETRO = "retro";
-	
+
 	private static MessageDigest md5;
 
 	private static MessageDigest getMD5() {
@@ -52,11 +52,10 @@ public class GravatarAPI {
 		}
 		return bytesToString(hash);
 	}
-	
+
 	public static String getAvatarURL(String userEmail) {
 		return "http://www.gravatar.com/avatar/" + getHash(userEmail);
 	}
-	
 
 	public static String bytesToString(byte[] hash) {
 		StringBuffer sb = new StringBuffer();

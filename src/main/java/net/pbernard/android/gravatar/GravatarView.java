@@ -24,7 +24,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -205,8 +204,7 @@ public class GravatarView extends LinearLayout {
 	private static Drawable getDrawableFromURL(final String url)
 			throws IOException, MalformedURLException {
 		return Drawable.createFromStream(
-				((InputStream) new URL(url).getContent()),
-				"Avatar picture");
+				((InputStream) new URL(url).getContent()), "Avatar picture");
 	}
 
 	private String addURLParameter(String url, String paramName,
